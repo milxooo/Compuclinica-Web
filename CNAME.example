@@ -1,0 +1,5 @@
+# Para activar un dominio personalizado en GitHub Pages:
+# 1. Renombra este archivo a 'CNAME' (sin la extensión .example)
+# 2. Reemplaza el texto de abajo con tu dominio exacto (ej: compuclinica.com o www.compuclinica.com)
+# 3. Configura tus registros DNS (A records o CNAME en tu proveedor de dominio como Cloudflare, GoDaddy, etc.)
+# compuclinica.com

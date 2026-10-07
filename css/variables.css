@@ -1,0 +1,64 @@
+/* variables.css — Design tokens del sistema */
+:root {
+  /* Colores de marca */
+  --color-brand:       #A26088;
+  --color-brand-dark:  #74445f;
+  --color-brand-soft:  #f3e9ef;
+  --color-cyan:        #57C5E9;
+  --color-turquoise:   #6ACBDA;
+  --color-lime:        #D6E145;
+
+  /* Colores neutros */
+  --color-ink:         #111111;
+  --color-muted:       #62626c;
+  --color-surface:     #ffffff;
+  --color-surface-2:   #f7f7f9;
+  --color-line:        #e9e5e8;
+  --color-dark-bg:     #111111;
+  --color-dark-text:   #b8b8c0;
+  --color-dark-muted:  #b9b9c2;
+  --color-dark-border: #2d2d32;
+  --color-footer-bg:   #09090b;
+
+  /* Gradiente corporativo */
+  --gradient: linear-gradient(120deg, var(--color-lime) 0%, var(--color-cyan) 38%, var(--color-brand) 74%);
+
+  /* Sombras */
+  --shadow-card:   0 18px 50px rgba(34, 20, 29, .12);
+  --shadow-quote:  0 12px 32px rgba(31, 19, 27, .06);
+  --shadow-float:  0 14px 30px rgba(0, 0, 0, .22);
+  --shadow-btn:    0 12px 24px rgba(162, 96, 136, .24);
+
+  /* Radios */
+  --radius-sm:   13px;
+  --radius-md:   17px;
+  --radius-lg:   24px;
+  --radius-xl:   28px;
+  --radius-2xl:  34px;
+  --radius-3xl:  36px;
+
+  /* Espaciado */
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   14px;
+  --space-lg:   22px;
+  --space-xl:   34px;
+  --space-2xl:  48px;
+  --space-3xl:  70px;
+  --space-section: 96px;
+
+  /* Tipografía */
+  --font-body:    "Inter", Arial, sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+  --font-serif:   "Playfair Display", serif;
+
+  /* Tamaños de fuente fluidos */
+  --text-sm:   0.82rem;
+  --text-base: 1rem;
+  --text-lg:   1.05rem;
+  --text-xl:   1.15rem;
+
+  /* Breakpoints (referencia para media queries) */
+  /* --bp-tablet: 640px  */
+  /* --bp-desktop: 960px */
+}

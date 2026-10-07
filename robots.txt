@@ -1,0 +1,5 @@
+# robots.txt para Compuclinica
+User-agent: *
+Allow: /
+
+Sitemap: https://compuclinica.com/sitemap.xml
