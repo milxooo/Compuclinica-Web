@@ -1,68 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página no encontrada (404) | Compuclinica</title>
-  <meta name="description" content="La página que estás buscando no existe o fue movida. Regresa a Compuclinica.">
+  <meta name="description" content="La página que estás buscando no existe o fue movida. Regresa al Centro de Servicio Autorizado EPSON Compuclinica.">
   <meta name="robots" content="noindex, follow">
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/main.css">
-  <style>
-    .error-hero {
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-    }
 
-    .error-code {
-      font: 900 clamp(5rem, 15vw, 10rem) var(--font-heading);
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
-    .error-card {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 48px 36px;
-      border-radius: var(--radius-2xl);
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--color-line);
-    }
-  </style>
+  <!-- Security Hardening -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; object-src 'none';">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
 </head>
 
 <body>
   <a href="./index.html#inicio" class="skip-link">Saltar al inicio</a>
 
-  <aside class="topbar" aria-label="Información rápida de contacto">
-    <div class="container">
-      <div><strong>Bogotá y alrededores</strong> <span class="slash-accent">/</span> Cobertura para empresas, oficinas y
-        particulares</div>
-      <div class="topbar-links">
-        <a href="tel:+3102427364" title="Llamar a Compuclinica">📞 Tel: <span>3102427364</span></a>
-        <a href="mailto:laboratorio@compuclinica.com" title="Escribir correo a Compuclinica">✉
-          <span>laboratorio@compuclinica.com</span></a>
-      </div>
-    </div>
-  </aside>
-
   <header class="nav" id="mainHeader">
     <div class="container nav-inner">
       <a href="./index.html#inicio" class="brand-link" aria-label="Compuclinica - Inicio">
-        <img class="brand-logo" src="./assets/images/logo-compuclinica.jpg" alt="Compuclinica Logo" width="238"
-          height="66" loading="eager" decoding="async">
+        <img class="brand-logo" src="./assets/images/logo-compuclinica.png" alt="Compuclinica - Centro de Servicio Autorizado EPSON en Bogotá" width="1150" height="419" loading="eager"
+          decoding="async">
+        <span class="logo-sep" aria-hidden="true"></span>
+        <img class="epson-logo" src="./assets/images/Epson Logo Black.svg" alt="EPSON Logo Autorizado" width="817" height="195" loading="eager"
+          decoding="async">
       </a>
 
       <button type="button" class="menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false"
@@ -76,8 +45,7 @@
           <li><a href="./index.html#servicios">Servicios</a></li>
           <li><a href="./index.html#nosotros">Nosotros</a></li>
           <li><a href="./index.html#proceso">Cómo trabajamos</a></li>
-          <li><a href="./index.html#blog">Guías técnicas</a></li>
-          <li><a href="./index.html#contacto" class="btn btn-primary">Solicitar servicio</a></li>
+          <li><a href="./index.html#contacto" class="btn btn-primary nav-contact">Información de contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -85,35 +53,32 @@
 
   <main class="error-hero">
     <div class="error-card">
-      <div class="error-code">404</div>
-      <div class="eyebrow" style="margin-bottom: 12px;">Equipo fuera de rango</div>
-      <h2>Diagnóstico: Página no encontrada</h2>
-      <p style="margin: 20px 0 30px;">
+      <div class="error-code" aria-hidden="true">404</div>
+      <h1>Página no encontrada (Error 404)</h1>
+      <p class="error-description">
         La dirección solicitada no existe, fue reubicada o el enlace ingresado tiene un error tipográfico.
       </p>
-      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+      <div class="error-actions">
         <a href="./index.html#inicio" class="btn btn-primary">Volver al inicio</a>
-        <a href="https://wa.me/+3102427364" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Contactar
-          por WhatsApp</a>
+        <a href="https://wa.me/+573102427364" class="btn btn-outline" target="_blank"
+          rel="noopener noreferrer">Contactar por WhatsApp</a>
       </div>
     </div>
   </main>
 
   <footer role="contentinfo">
     <div class="container footer-inner">
-      <div class="footer-brand">Compu<span class="slash-accent">/</span>Clínica</div>
-      <div>© <span id="year">2026</span> Compuclinica. Todos los derechos reservados.</div>
-      <div>Diagnóstico <span class="slash-accent">/</span> Reparación <span class="slash-accent">/</span> Soporte</div>
+      <div class="footer-brand">Compuclinica</div>
+      <address class="footer-address">
+        Centro de Servicio Autorizado EPSON &mdash;
+        Carrera 15 #80-05 Piso 3, Local 77A, Edificio Lago 80, Bogotá, Colombia.
+        <a href="tel:+576018050441">601 8050441</a> &middot;
+        <a href="https://wa.me/+573102427364" target="_blank" rel="noopener noreferrer">+57 310 2427364</a>
+      </address>
+      <div>&copy; <span id="year">2026</span> Compuclinica. Todos los derechos reservados.</div>
     </div>
   </footer>
-  <a class="floating-whatsapp"
-    href="https://wa.me/+3102427364?text=Hola%20CompuCl%C3%ADnica%2C%20solicito%20soporte%20t%C3%A9cnico"
-    target="_blank" rel="noopener noreferrer" aria-label="Abrir chat de WhatsApp para atención y soporte técnico">
-    <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
-      <path fill="currentColor"
-        d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.42C8.93 7.42 8.65 7.49 8.41 7.75C8.16 8.01 7.49 8.64 7.49 9.94C7.49 11.23 8.43 12.49 8.56 12.67C8.7 12.84 10.42 15.5 13.06 16.64C13.69 16.91 14.17 17.07 14.56 17.2C15.19 17.39 15.77 17.36 16.22 17.3C16.73 17.22 17.78 16.66 18 16.03C18.23 15.41 18.23 14.87 18.16 14.76C18.09 14.65 17.91 14.58 17.65 14.45C17.38 14.32 16.08 13.68 15.84 13.59C15.6 13.5 15.43 13.46 15.25 13.72C15.08 13.98 14.59 14.58 14.44 14.75C14.29 14.93 14.15 14.95 13.88 14.82C13.62 14.69 12.77 14.41 11.75 13.5C10.96 12.8 10.43 11.93 10.28 11.67C10.13 11.41 10.26 11.27 10.39 11.14C10.51 11.02 10.66 10.83 10.79 10.68C10.93 10.53 10.97 10.42 11.06 10.25C11.15 10.07 11.11 9.92 11.04 9.79C10.97 9.66 10.44 8.35 10.22 7.82C10 7.3 9.78 7.38 9.62 7.37C9.47 7.37 9.29 7.42 9.11 7.42Z" />
-    </svg>
-  </a>
+
 
 
   <script type="module" src="./js/main.js"></script>

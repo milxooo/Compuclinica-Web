@@ -16,6 +16,10 @@ section {
   margin-bottom: var(--space-2xl);
 }
 
+.section-head--flush {
+  margin-bottom: 0;
+}
+
 .section-head h2 {
   margin: 12px 0 14px;
 }
@@ -78,14 +82,35 @@ section {
 .brand-link {
   display: inline-flex;
   align-items: center;
+  gap: 16px;
+  text-decoration: none;
 }
 
 .brand-logo {
-  width: 238px;
-  max-height: 66px;
+  height: 40px;
+  width: auto;
+  max-width: 200px;
   object-fit: contain;
   object-position: left center;
   mix-blend-mode: multiply;
+}
+
+.epson-logo {
+  height: 40px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  opacity: 0.88;
+}
+
+/* Separador vertical elegante entre los dos logos */
+.logo-sep {
+  display: inline-block;
+  width: 1.5px;
+  height: 26px;
+  background-color: #cbd0d6;
+  border-radius: 1px;
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -122,6 +147,24 @@ section {
   width: 100%;
 }
 
+/* El botón de contacto en la nav: sin subrayado animado, con padding generoso a izquierda y derecha */
+.nav-contact::after {
+  display: none !important;
+}
+
+.nav-links a.nav-contact,
+.nav-contact.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  min-height: 48px;
+  border-radius: 14px;
+  font-size: 0.94rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
 .menu-btn {
   display: none;
   border: 0;
@@ -131,6 +174,7 @@ section {
   padding: 8px;
   color: var(--color-ink);
   line-height: 1;
+  margin-left: auto;
 }
 
 /* Grillas de sección */
@@ -147,27 +191,13 @@ section {
   align-items: center;
 }
 
-.why-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 54px;
-  align-items: center;
-}
-
-.metric-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 
-.testimonial-grid,
-.blog-grid {
+.testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
@@ -203,13 +233,42 @@ footer {
   font-size: 1.15rem;
 }
 
+.footer-address {
+  font-style: normal;
+  color: var(--color-dark-text);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.footer-address a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  transition: color var(--transition-fast);
+}
+
+.footer-address a:hover {
+  color: var(--color-lime);
+}
+
 .slash-accent {
   color: var(--color-lime);
   font-weight: 900;
 }
 
 /* Media Queries para Responsive Design */
-@media (max-width: 960px) {
+@media (max-width: 1140px) and (min-width: 1025px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a.nav-contact,
+  .nav-contact.btn {
+    padding: 0 22px;
+  }
+}
+
+@media (max-width: 1024px) {
   .nav-links {
     display: none;
     position: absolute;
@@ -221,6 +280,7 @@ footer {
     padding: 24px 28px;
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
   }
 
@@ -232,15 +292,31 @@ footer {
     display: block;
   }
 
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .nav-links a.nav-contact,
+  .nav-contact.btn {
+    display: inline-flex;
+    width: auto;
+    padding: 0 28px;
+    margin-top: 6px;
+  }
+
   .specialist-grid,
-  .why-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
   .service-grid,
   .testimonial-grid,
-  .blog-grid,
   .steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -259,30 +335,42 @@ footer {
     padding: 9px 0;
     align-items: flex-start;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
   }
 
   .topbar-links {
-    gap: 10px;
+    gap: 14px;
+    flex-wrap: wrap;
   }
 
   .nav-inner {
-    height: 76px;
+    height: 74px;
   }
 
   .nav-links {
-    top: 76px;
+    top: 74px;
+    padding: 20px 24px;
+  }
+
+  .brand-link {
+    gap: 12px;
   }
 
   .brand-logo {
-    width: 190px;
+    height: 32px;
+  }
+
+  .epson-logo {
+    height: 32px;
+  }
+
+  .logo-sep {
+    height: 20px;
   }
 
   .service-grid,
   .testimonial-grid,
-  .blog-grid,
-  .steps-grid,
-  .metric-grid {
+  .steps-grid {
     grid-template-columns: 1fr;
   }
 
@@ -290,5 +378,23 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-logo {
+    height: 28px;
+  }
+
+  .epson-logo {
+    height: 28px;
+  }
+
+  .logo-sep {
+    height: 18px;
+  }
+
+  .brand-link {
+    gap: 10px;
   }
 }

@@ -1,5 +1,18 @@
-# robots.txt para Compuclinica
+# ==============================================================================
+# robots.txt — Compuclinica (https://compuclinica.com/)
+# Centro de Servicio Autorizado EPSON en Bogotá, Colombia
+# ==============================================================================
+
 User-agent: *
 Allow: /
+Allow: /assets/
+Allow: /css/
+Allow: /js/
 
+# Evitar indexación de páginas de error, documentación y archivos de configuración
+Disallow: /404.html
+Disallow: /*.md$
+Disallow: /CNAME.example
+
+# Mapa del sitio oficial (XML Sitemap)
 Sitemap: https://compuclinica.com/sitemap.xml

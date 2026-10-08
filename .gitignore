@@ -1,20 +1,55 @@
-# Dependencias
-node_modules/
+# ==============================================================================
+# .gitignore — Compuclinica
+# Proyecto Web Estático (HTML5 semántico, CSS3 modular, Vanilla JS)
+# ==============================================================================
 
-# Logs del sistema
+# Sistema operativo y explorador de archivos
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# Editores y entornos de desarrollo (IDEs)
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+*.bak
+
+# Dependencias y gestores de paquetes (para herramientas o linters locales)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs y trazas de depuración
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
 
-# Archivos de entorno y editor
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.swp
-*.swo
+# Variables de entorno y secretos locales (si se usan scripts auxiliares)
+.env
+.env.local
+.env.*.local
 
-# Temporales de compilación opcionales (dist se mantiene versionado o se ignora según flujo)
-# Si se despliega vía GitHub Actions, dist/ puede ignorarse; para Pages directo se incluye.
-.temp/
+# Archivos de caché y compilación temporal
 .cache/
+.temp/
+.tmp/
+dist/
+build/
+coverage/
+.playwright/
+test-results/
+playwright-report/
+
+# Scripts de prueba y archivos de scratch locales
+scratch/
