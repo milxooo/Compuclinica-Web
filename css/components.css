@@ -278,6 +278,113 @@
   color: var(--color-brand-dark);
 }
 
+/* Carrusel horizontal de servicios */
+.service-carousel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: var(--space-md);
+}
+
+.service-track {
+  display: flex;
+  gap: var(--space-lg);
+  overflow-x: auto;
+  padding: 12px 4px 28px;
+  margin: -12px -4px -28px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-inline: 4px;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.service-track::-webkit-scrollbar {
+  display: none;
+}
+
+.service-track:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: var(--radius-lg);
+}
+
+.service-track .service-card {
+  flex: 0 0 calc((100% - 2 * var(--space-lg)) / 3);
+  scroll-snap-align: start;
+}
+
+.carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+  color: var(--color-brand);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-quote);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background: var(--color-brand);
+  color: #ffffff;
+}
+
+.carousel-btn:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 3px;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+@media (max-width: 960px) {
+  .service-track .service-card {
+    flex-basis: calc((100% - var(--space-lg)) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .service-carousel {
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--space-lg);
+  }
+
+  .service-track {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .service-track .service-card {
+    flex-basis: 85%;
+  }
+
+  .carousel-prev {
+    grid-row: 2;
+    grid-column: 1;
+    justify-self: end;
+    margin-right: 6px;
+  }
+
+  .carousel-next {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: start;
+    margin-left: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-track {
+    scroll-behavior: auto;
+  }
+}
+
 /* ==========================================================================
    Nosotros / Panel Visual
    ========================================================================== */

@@ -3,11 +3,13 @@
  */
 import { initMenu } from './menu.js';
 import { initContactForm } from './form.js';
+import { initCarousel } from './carousel.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Inicialización de componentes
   initMenu();
   initContactForm();
+  initCarousel();
 
   // Actualización dinámica del año para copyright
   const yearEl = document.getElementById('year');

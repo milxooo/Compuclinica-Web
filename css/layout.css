@@ -178,12 +178,6 @@ section {
 }
 
 /* Grillas de sección */
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-}
-
 .specialist-grid {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
@@ -315,7 +309,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .service-grid,
   .testimonial-grid,
   .steps-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -368,7 +361,6 @@ footer {
     height: 20px;
   }
 
-  .service-grid,
   .testimonial-grid,
   .steps-grid {
     grid-template-columns: 1fr;
