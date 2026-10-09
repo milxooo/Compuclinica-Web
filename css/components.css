@@ -671,6 +671,11 @@
   color: var(--color-lime);
 }
 
+.contact-item .contact-address-detail {
+  font-size: 0.85em;
+  color: var(--color-text-muted);
+}
+
 .form {
   background: #ffffff;
   color: var(--color-ink);
