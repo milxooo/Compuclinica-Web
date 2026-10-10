@@ -20,14 +20,14 @@ export function initContactForm() {
       if (labelMensaje) labelMensaje.textContent = '¿Qué repuestos, partes o suministros requiere cotizar? *';
       if (mensajeInput) mensajeInput.placeholder = 'Indica el repuesto (cabezal, rodillo, tarjeta, etc.) o suministros (tintas, consumibles) y cantidad requerida...';
       if (btnSubmit) btnSubmit.textContent = 'Enviar solicitud de cotización vía WhatsApp';
-      if (formNote) formNote.textContent = 'Tu solicitud de cotización se enviará directamente a nuestro canal de atención y ventas por WhatsApp.';
+      if (formNote) formNote.textContent = 'Su solicitud de cotización se enviará directamente a nuestro canal de WhatsApp.';
     } else {
       if (labelEquipo) labelEquipo.textContent = 'Equipo y modelo';
       if (equipoInput) equipoInput.placeholder = 'Ej: Epson L3150, Plotter T3170, Portátil Lenovo...';
       if (labelMensaje) labelMensaje.textContent = '¿Qué falla o síntoma presenta su equipo? *';
       if (mensajeInput) mensajeInput.placeholder = 'Describe la falla, códigos de error en pantalla o ruidos del equipo...';
       if (btnSubmit) btnSubmit.textContent = 'Enviar solicitud técnica vía WhatsApp';
-      if (formNote) formNote.textContent = 'Tu información se enviará directamente a nuestro canal de soporte técnico por WhatsApp.';
+      if (formNote) formNote.textContent = 'Su información se enviará directamente a nuestro canal de WhatsApp.';
     }
   }
 
