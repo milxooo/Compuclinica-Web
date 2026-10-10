@@ -3,10 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
+  <!-- CSP: debe ir antes de cualquier recurso para gobernarlo -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com; connect-src 'none'; frame-src https://www.youtube-nocookie.com; base-uri 'none'; form-action 'none'; object-src 'none';">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicio Técnico Autorizado EPSON en Bogotá | Compuclinica</title>
   <meta name="description"
-    content="Centro de Servicio Autorizado EPSON en Bogotá. Diagnóstico, reparación y mantenimiento de impresoras EcoTank, plotters y scanners. Cra 15 #80-05 Lago 80.">
+    content="Centro de Servicio Autorizado EPSON en Bogotá: impresoras, plotters, proyectores, scanners, POS y robots. Soporte para computadores y repuestos originales.">
   <meta name="author" content="Compuclinica">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.compuclinica.com/">
@@ -16,17 +19,20 @@
   <meta property="og:url" content="https://www.compuclinica.com/">
   <meta property="og:title" content="Servicio Técnico Autorizado EPSON en Bogotá | Compuclinica">
   <meta property="og:description"
-    content="Centro de Servicio Autorizado EPSON en Bogotá. Diagnóstico, reparación y mantenimiento de impresoras EcoTank, plotters y scanners. Cra 15 #80-05 Lago 80.">
+    content="Centro de Servicio Autorizado EPSON en Bogotá: impresoras, plotters, proyectores, scanners, POS y robots. Soporte para computadores y repuestos originales.">
   <meta property="og:site_name" content="Compuclinica">
   <meta property="og:locale" content="es_CO">
-  <meta property="og:image" content="https://www.compuclinica.com/assets/images/logo-compuclinica.png">
+  <meta property="og:image" content="https://www.compuclinica.com/assets/images/og-compuclinica.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logotipo de Compuclinica">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Servicio Técnico Autorizado EPSON en Bogotá | Compuclinica">
   <meta name="twitter:description"
-    content="Centro de Servicio Autorizado EPSON en Bogotá. Diagnóstico, reparación y mantenimiento de impresoras EcoTank, plotters y scanners. Cra 15 #80-05 Lago 80.">
-  <meta name="twitter:image" content="https://www.compuclinica.com/assets/images/logo-compuclinica.png">
+    content="Centro de Servicio Autorizado EPSON en Bogotá: impresoras, plotters, proyectores, scanners, POS y robots. Soporte para computadores y repuestos originales.">
+  <meta name="twitter:image" content="https://www.compuclinica.com/assets/images/og-compuclinica.png">
 
   <!-- Favicon y Recursos Gráficos -->
   <link rel="icon" href="/assets/icons/favicon.ico" sizes="48x48">
@@ -36,29 +42,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 
-  <!-- Hoja de Estilos Principal -->
-  <link rel="stylesheet" href="./css/main.css">
+  <!-- Hojas de estilo (enlazadas directamente para evitar la cascada de @import) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/utilities.css">
 
-  <!-- Security Hardening (compatible con GitHub Pages / hosting estático) -->
-  <!-- CSP: permite scripts/estilos propios + fuentes de Google + wa.me para el formulario -->
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'none'; frame-src https://www.youtube-nocookie.com; base-uri 'none'; form-action 'none'; object-src 'none';">
+  <!-- Seguridad (hosting estático: solo las directivas que el navegador acepta vía <meta>) -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
   <!-- Datos Estructurados JSON-LD (Schema.org) para SEO Técnico -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ProfessionalService"],
-    "@id": "https://www./#organization",
+    "@id": "https://www.compuclinica.com/#organization",
     "name": "Compuclinica",
     "alternateName": "Compuclinica - Centro de Servicio Autorizado EPSON",
     "image": "https://www.compuclinica.com/assets/images/logo-compuclinica.png",
     "logo": "https://www.compuclinica.com/assets/images/logo-compuclinica.png",
     "description": "Compuclinica es Centro de Servicio Autorizado EPSON en Bogotá, Colombia. Ofrecemos diagnóstico, reparación y mantenimiento de impresoras EcoTank, plotters SureColor, proyectores y scanners EPSON, así como soporte técnico para computadores y pantallas.",
-    "telephone": ["+573102427364"],
+    "telephone": ["+573102427364", "+576018050441"],
     "email": "laboratorio@compuclinica.com",
     "address": {
       "@type": "PostalAddress",
@@ -276,8 +283,8 @@
   <header class="nav" id="mainHeader">
     <div class="container nav-inner">
       <a href="#inicio" class="brand-link" aria-label="Compuclinica - Inicio">
-        <img class="brand-logo" src="./assets/images/logo-compuclinica.png"
-          alt="Compuclinica - Centro de Servicio Autorizado EPSON en Bogotá" width="1150" height="419" loading="eager"
+        <img class="brand-logo" src="./assets/images/logo-compuclinica-460.webp"
+          alt="Compuclinica - Centro de Servicio Autorizado EPSON en Bogotá" width="460" height="168" loading="eager"
           decoding="async">
         <span class="logo-sep" aria-hidden="true"></span>
         <img class="epson-logo" src="./assets/images/Epson Logo Black.svg" alt="EPSON Logo Autorizado" width="817"
@@ -805,6 +812,35 @@
               <span>Sábados de 9:00am a 12:00m</span>
             </div>
           </div>
+
+          <a class="contact-map" href="https://www.google.com/maps/search/?api=1&amp;query=Compuclinica%20Carrera%2015%20%2380-05%20Bogot%C3%A1"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="Cómo llegar a Compuclinica, Carrera 15 #80-05, Bogotá, en Google Maps (se abre en una pestaña nueva)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270" aria-hidden="true"
+              focusable="false">
+              <defs>
+                <linearGradient id="mapGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#D6E145"></stop>
+                  <stop offset="0.5" stop-color="#57C5E9"></stop>
+                  <stop offset="1" stop-color="#A26088"></stop>
+                </linearGradient>
+              </defs>
+              <rect width="480" height="270" fill="#1e1e24"></rect>
+              <path d="M-20 60 C80 20 170 40 230 90 C300 150 380 130 500 190 L500 290 L-20 290Z" fill="url(#mapGrad)"
+                opacity="0.14"></path>
+              <g stroke="#ffffff" stroke-linecap="round" fill="none">
+                <path d="M0 50H480M0 110H480M0 170H480M0 230H480" stroke-width="3" opacity="0.1"></path>
+                <path d="M70 0V270M150 0V270M310 0V270M390 0V270" stroke-width="3" opacity="0.1"></path>
+                <path d="M230 0V270" stroke-width="6" opacity="0.14"></path>
+                <path d="M-10 262L490 30" stroke-width="10" opacity="0.16"></path>
+              </g>
+              <circle cx="240" cy="128" r="38" fill="#A26088" opacity="0.25"></circle>
+              <path d="M240 156C240 156 216 128 216 110a24 24 0 0 1 48 0c0 18-24 46-24 46Z" fill="#A26088" stroke="#ffffff"
+                stroke-width="3"></path>
+              <circle cx="240" cy="110" r="9" fill="#ffffff"></circle>
+            </svg>
+            <span class="contact-map-cta">Cómo llegar <span aria-hidden="true">→</span></span>
+          </a>
         </div>
 
         <form class="form" id="contactForm" data-whatsapp="+573102427364" novalidate>
@@ -845,6 +881,10 @@
                 WhatsApp</button>
               <div class="form-note" id="formNote">
                 Su información se enviará directamente a nuestro canal de soporte técnico por WhatsApp.
+              </div>
+              <div class="form-note">
+                Al enviar esta solicitud autoriza a Compuclinica a tratar sus datos (nombre, teléfono y los datos del
+                equipo) únicamente para responderle, conforme a la Ley 1581 de 2012.
               </div>
             </div>
           </div>

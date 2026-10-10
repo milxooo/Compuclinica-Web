@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none';">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página no encontrada (404) | Compuclinica</title>
   <meta name="description"
@@ -11,15 +13,16 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-compuclinica.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/utilities.css">
 
   <!-- Security Hardening -->
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; object-src 'none';">
-  <meta http-equiv="X-Frame-Options" content="DENY">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
 </head>
 
 <body>
@@ -28,7 +31,7 @@
   <header class="nav" id="mainHeader">
     <div class="container nav-inner">
       <a href="/#inicio" class="brand-link" aria-label="Compuclinica - Inicio">
-        <img class="brand-logo" src="./assets/images/logo-compuclinica.png"
+        <img class="brand-logo" src="./assets/images/logo-compuclinica-460.webp"
           alt="Compuclinica - Centro de Servicio Autorizado EPSON en Bogotá" width="1150" height="419" loading="eager"
           decoding="async">
         <span class="logo-sep" aria-hidden="true"></span>
