@@ -4,12 +4,14 @@
 import { initMenu } from './menu.js';
 import { initContactForm } from './form.js';
 import { initCarousel } from './carousel.js';
+import { initVideoEmbeds } from './video.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Inicialización de componentes
   initMenu();
   initContactForm();
   initCarousel();
+  initVideoEmbeds();
 
   // Actualización dinámica del año para copyright
   const yearEl = document.getElementById('year');

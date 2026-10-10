@@ -195,6 +195,88 @@
   font-weight: 900;
 }
 
+/* Video del hero (YouTube con carga diferida) */
+.hero-video {
+  margin: 0;
+  min-width: 0;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #000000;
+  box-shadow: var(--shadow-card);
+}
+
+.video-play {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.video-play img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 68px;
+  height: 68px;
+  margin: -34px 0 0 -34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--color-brand);
+  color: #ffffff;
+  box-shadow: var(--shadow-btn);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.video-play:hover .video-play-icon {
+  background: var(--color-brand-dark);
+  transform: scale(1.06);
+}
+
+.video-play:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: -3px;
+}
+
+.video-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.hero-video figcaption {
+  margin-top: 10px;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+@media (min-width: 1025px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    max-width: none;
+    gap: 56px;
+  }
+}
+
 
 
 /* ==========================================================================
