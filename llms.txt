@@ -1,0 +1,28 @@
+# Compuclinica
+
+> Compuclinica es un Centro de Servicio Autorizado EPSON en Bogotá, Colombia. Ofrece diagnóstico, reparación y mantenimiento de impresoras, plotters, proyectores, scanners, impresoras POS y de etiquetas y robots EPSON, soporte técnico para computadores y pantallas, y venta de repuestos y suministros originales EPSON.
+
+El sitio es una página única en español (es-CO). Las secciones a continuación apuntan a sus apartados principales. Para solicitar un servicio o una cotización, el formulario de contacto envía la solicitud por WhatsApp.
+
+## Servicios
+
+- [Servicios técnicos](https://www.compuclinica.com/#servicios): impresoras EcoTank y empresariales (WorkForce), plotters SureColor, proyectores, scanners, impresoras POS (TM-T), impresoras de etiquetas ColorWorks, robots EPSON, computadores y pantallas.
+- [Repuestos y suministros originales EPSON](https://www.compuclinica.com/#servicios): cabezales, almohadillas, tintas de botella EcoTank, rodillos y otros repuestos, bajo cotización.
+
+## Proceso y confianza
+
+- [Nosotros](https://www.compuclinica.com/#nosotros): enfoque técnico de diagnóstico, mantenimiento, reparación y pruebas.
+- [Cómo trabajamos](https://www.compuclinica.com/#proceso): recepción de síntomas, diagnóstico y cotización, intervención con aprobación del cliente, pruebas y entrega.
+- [Preguntas frecuentes](https://www.compuclinica.com/#faq): estatus de centro autorizado, equipos atendidos, ubicación y horario, proceso de diagnóstico y repuestos genuinos.
+
+## Contacto
+
+- [Contacto y ubicación](https://www.compuclinica.com/#contacto): Carrera 15 #80-05, Piso 3, Local 77A, Edificio Lago 80, Bogotá (sector El Lago / Chapinero).
+- Horario: lunes a viernes de 9:00 a.m. a 5:00 p.m.; sábados de 9:00 a.m. a 12:00 m.
+- WhatsApp / celular: +57 310 2427364
+- Teléfono: +57 601 8050441
+- Correo: laboratorio@compuclinica.com
+
+## Optional
+
+- [Sitemap](https://www.compuclinica.com/sitemap.xml)
