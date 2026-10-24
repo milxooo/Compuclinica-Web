@@ -1067,140 +1067,15 @@ textarea {
   font-weight: 700;
 }
 
-/* Flyer EPSON dentro del FAQ + visor ampliable */
+/* Flyer EPSON dentro del FAQ */
 .faq-flyer {
-  margin: 18px 0 0;
+  margin: var(--space-lg) 0 0;
 }
 
-.faq-flyer-open {
-  position: relative;
+.faq-flyer img {
   display: block;
   width: 100%;
-  padding: 0;
+  height: auto;
   border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
-  overflow: hidden;
-  background: #ffffff;
-  cursor: zoom-in;
-}
-
-.faq-flyer-open img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.faq-flyer-open:focus-visible {
-  outline: 3px solid var(--color-brand);
-  outline-offset: 3px;
-}
-
-.faq-flyer-hint {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: var(--color-brand-dark);
-  color: #ffffff;
-  font: 700 0.85rem var(--font-heading);
-}
-
-.flyer-viewer {
-  width: 100%;
-  max-width: 100vw;
-  height: 100%;
-  max-height: 100dvh;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: var(--color-dark-bg);
-  color: #ffffff;
-}
-
-.flyer-viewer[open] {
-  display: flex;
-  flex-direction: column;
-}
-
-.flyer-viewer::backdrop {
-  background: rgba(0, 0, 0, 0.85);
-}
-
-html:has(.flyer-viewer[open]) {
-  overflow: hidden;
-}
-
-.flyer-viewer-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-  padding: 10px 14px;
-  background: var(--color-dark-bg);
-  border-bottom: 1px solid var(--color-dark-border);
-}
-
-.flyer-viewer-tools {
-  display: flex;
-  gap: var(--space-sm);
-}
-
-.flyer-btn {
-  min-width: 44px;
-  height: 44px;
-  padding: 0 16px;
-  border: 1px solid var(--color-brand);
-  border-radius: 999px;
-  background: var(--color-brand);
-  color: #ffffff;
-  font: 800 1.2rem/1 var(--font-heading);
-  cursor: pointer;
-  transition: background 0.2s ease, opacity 0.2s ease;
-}
-
-.flyer-btn--close {
-  font-size: 0.95rem;
-}
-
-.flyer-btn:hover:not(:disabled) {
-  background: #ffffff;
-  color: var(--color-brand-dark);
-}
-
-.flyer-btn:active:not(:disabled) {
-  background: var(--color-brand-dark);
-  color: #ffffff;
-}
-
-.flyer-btn:focus-visible {
-  outline: 3px solid #ffffff;
-  outline-offset: 3px;
-}
-
-.flyer-btn:disabled {
-  opacity: 0.4;
-  cursor: default;
-}
-
-.flyer-viewer-body {
-  flex: 1;
-  min-height: 0;
-  overflow: auto;
-  overscroll-behavior: contain;
-  touch-action: pan-x pan-y pinch-zoom;
-  background: #ffffff;
-}
-
-.flyer-viewer-body:focus-visible {
-  outline: 3px solid var(--color-brand);
-  outline-offset: -3px;
-}
-
-.flyer-viewer-body img {
-  display: block;
-  width: calc(max(100%, 900px) * var(--flyer-zoom, 1));
-  max-width: none;
-  height: auto;
-  margin: 0 auto;
 }
