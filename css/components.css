@@ -593,63 +593,57 @@
   font-size: 0.94rem;
 }
 
-
-
-/* ==========================================================================
-   Testimonios
-   ========================================================================== */
-.testimonials {
-  background: linear-gradient(180deg, #ffffff, #fbf7fa);
+/* Carrusel móvil de pasos: reutiliza .carousel-btn y la lógica de carousel.js */
+.process-carousel .carousel-btn {
+  display: none;
 }
 
-.quote {
-  background: #ffffff;
-  border: 1px solid var(--color-line);
+.steps-grid:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
   border-radius: var(--radius-lg);
-  padding: 28px;
-  box-shadow: var(--shadow-quote);
-  display: flex;
-  flex-direction: column;
 }
 
-.quote-mark {
-  font: 700 4rem/1 var(--font-serif);
-  color: var(--color-brand);
-  opacity: 0.35;
-  margin-bottom: -10px;
+@media (max-width: 640px) {
+  .process-carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--space-lg);
+  }
+
+  .process-carousel .carousel-btn {
+    display: grid;
+  }
+
+  .steps-grid {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: flex;
+    gap: var(--space-lg);
+    overflow-x: auto;
+    padding: 12px 4px 28px;
+    margin: -12px -4px -28px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 4px;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .steps-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .steps-grid .step {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
 }
 
-.quote p {
-  color: #4e4e57;
-  font-style: italic;
-  flex-grow: 1;
-}
-
-.quote-author {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 18px;
-}
-
-.quote small {
-  color: #8a8a94;
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
-.quote-tag,
-.placeholder {
-  display: inline-flex;
-  align-self: flex-start;
-  background: #fff6d8;
-  border: 1px solid #ead89a;
-  color: #6d5a17;
-  border-radius: 999px;
-  padding: 4px 9px;
-  font-size: 0.7rem;
-  font-weight: 800;
-  text-transform: uppercase;
+@media (prefers-reduced-motion: reduce) {
+  .steps-grid {
+    scroll-behavior: auto;
+  }
 }
 
 
@@ -972,6 +966,10 @@ textarea {
 .faq-section {
   padding: 90px 0;
   background: #f8fafc;
+}
+
+.faq-section .eyebrow--lime {
+  color: var(--color-brand);
 }
 
 .faq-grid {

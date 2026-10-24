@@ -191,12 +191,6 @@ section {
   gap: 18px;
 }
 
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-}
-
 .contact-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -309,7 +303,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .testimonial-grid,
   .steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -359,11 +352,6 @@ footer {
 
   .logo-sep {
     height: 20px;
-  }
-
-  .testimonial-grid,
-  .steps-grid {
-    grid-template-columns: 1fr;
   }
 
   .footer-inner {

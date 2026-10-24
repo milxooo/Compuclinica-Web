@@ -1,11 +1,12 @@
 /**
- * carousel.js — Carrusel horizontal de la sección Servicios
+ * carousel.js — Carruseles horizontales (Servicios y Cómo trabajamos)
  */
 export function initCarousel() {
-  const carousel = document.querySelector('[data-carousel]');
-  if (!carousel) return;
+  document.querySelectorAll('[data-carousel]').forEach(setupCarousel);
+}
 
-  const track = carousel.querySelector('.service-track');
+function setupCarousel(carousel) {
+  const track = carousel.querySelector('.service-track, .steps-grid');
   const prevBtn = carousel.querySelector('.carousel-prev');
   const nextBtn = carousel.querySelector('.carousel-next');
   if (!track || !prevBtn || !nextBtn) return;
@@ -13,7 +14,7 @@ export function initCarousel() {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   function getStep() {
-    const card = track.querySelector('.service-card');
+    const card = track.querySelector('.service-card, .step');
     if (!card) return track.clientWidth;
     const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
     return card.getBoundingClientRect().width + gap;
@@ -30,6 +31,8 @@ export function initCarousel() {
     const maxScroll = track.scrollWidth - track.clientWidth;
     prevBtn.disabled = track.scrollLeft <= 1;
     nextBtn.disabled = track.scrollLeft >= maxScroll - 1;
+    // Solo es foco de teclado cuando realmente se puede desplazar (p. ej. "Cómo trabajamos" en escritorio no)
+    track.tabIndex = maxScroll > 1 ? 0 : -1;
   }
 
   prevBtn.addEventListener('click', () => scrollByCards(-1));
