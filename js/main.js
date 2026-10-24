@@ -5,6 +5,7 @@ import { initMenu } from './menu.js';
 import { initContactForm } from './form.js';
 import { initCarousel } from './carousel.js';
 import { initVideoEmbeds } from './video.js';
+import { initFlyerViewer } from './flyer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Inicialización de componentes
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initCarousel();
   initVideoEmbeds();
+  initFlyerViewer();
 
   // Actualización dinámica del año para copyright
   const yearEl = document.getElementById('year');
