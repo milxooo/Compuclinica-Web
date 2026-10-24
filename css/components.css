@@ -1076,6 +1076,7 @@ textarea {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 1225 / 1582;
   border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
 }
