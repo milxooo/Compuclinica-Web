@@ -613,6 +613,24 @@
 
   .process-carousel .carousel-btn {
     display: grid;
+    background: var(--color-lime);
+    color: var(--color-dark-bg);
+    border-color: var(--color-lime);
+    box-shadow: none;
+  }
+
+  .process-carousel .carousel-btn:hover:not(:disabled) {
+    background: #ffffff;
+    color: var(--color-dark-bg);
+  }
+
+  .process-carousel .carousel-btn:active:not(:disabled) {
+    background: var(--color-cyan);
+    color: var(--color-dark-bg);
+  }
+
+  .process-carousel .carousel-btn:focus-visible {
+    outline-color: #ffffff;
   }
 
   .steps-grid {
